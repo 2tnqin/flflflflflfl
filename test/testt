@@ -1,2 +1,24 @@
-a = 3
-print a
+a = int(input("작업의 수를 입력하세요 : "))
+b = int(input("구할 작업 번호를 입력하세요 : "))
+c = list(map(int, input("작업 우선수위를 입력하세요 : ").split()))
+time = 0
+plist = []
+    for i in range(0, the_num):
+        plist.append(i)
+
+
+while True:
+    while c[0] < max(c):
+        c.append(c.pop(0)) # 배열에서 꺼내줌
+
+     time += 1
+
+     if plist[0] == num:  # 구할 작업 번호에 도달 시 while문 종료
+            break
+
+    c.pop(0)  # 프린트한 값 제거
+        plist.pop(0)
+
+    return time
+
+print n
