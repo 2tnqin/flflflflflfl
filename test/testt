@@ -1,6 +1,6 @@
 a = int(input("작업의 수를 입력하세요 : "))
 b = int(input("구할 작업 번호를 입력하세요 : "))
-priority = list(map(int, input("작업 우선수위를 입력하세요 : ").split()))
+priority = list(map(int, input("작업 우선위를 입력하세요 : ").split()))
 
 def printer_queue(num, iValue, priorities):
     List = []
