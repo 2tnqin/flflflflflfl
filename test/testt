@@ -1,24 +1,27 @@
 a = int(input("작업의 수를 입력하세요 : "))
 b = int(input("구할 작업 번호를 입력하세요 : "))
-c = list(map(int, input("작업 우선수위를 입력하세요 : ").split()))
-time = 0
-plist = []
-    for i in range(0, the_num):
-        plist.append(i)
+priority = list(map(int, input("작업 우선수위를 입력하세요 : ").split()))
 
+def printer_queue(num, iValue, priorities):
+    List = []
+    for i in range(num):
+        List.append(i)
 
-while True:
-    while c[0] < max(c):
-        c.append(c.pop(0)) # 배열에서 꺼내줌
+    time = 0    
 
-     time += 1
+    while True:
+        while priorities[0] < max(priorities):  
+            priorities.append(priorities.pop(0))
+            List.append(List.pop(0))
+        
+        time += 1
 
-     if plist[0] == num:  # 구할 작업 번호에 도달 시 while문 종료
+        if List[0] == iValue: 
             break
 
-    c.pop(0)  # 프린트한 값 제거
-        plist.pop(0)
+        priorities.pop(0)
+        List.pop(0)
 
     return time
 
-print n
+print(printer_queue(a, b, priority))
